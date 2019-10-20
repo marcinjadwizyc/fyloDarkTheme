@@ -1,0 +1,36 @@
+{
+	"name": "fylodarktheme",
+	"version": "1.0.0",
+	"description": "Fylo Landing Page",
+	"main": "./src/index.html",
+	"scripts": {
+		"devserver": "live-server --open=./src",
+		"watch:scss": "node-sass ./src/scss/main.scss ./src/style.css -w",
+		"compile:css": "node-sass ./src/scss/main.scss ./src/style.css --output-style compressed",
+		"prefix:css": "postcss ./src/style.css --use autoprefixer -d ./build",
+		"build:css": "run-s compile:css prefix:css",
+		"build:html": "html-minifier ./src/index.html -o ./build/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes",
+		"copy:assets": "copyfiles ./src/assets/* ./build/assets --flat",
+		"build": "run-s build:css build:html copy:assets",
+		"start": "run-p devserver watch:scss"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/marcinjadwizyc/fyloDarkTheme.git"
+	},
+	"author": "Marcin Jadwiżyc",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/marcinjadwizyc/fyloDarkTheme/issues"
+	},
+	"homepage": "https://github.com/marcinjadwizyc/fyloDarkTheme#readme",
+	"devDependencies": {
+		"autoprefixer": "^9.6.5",
+		"copyfiles": "^2.1.1",
+		"html-minifier": "^4.0.0",
+		"node-sass": "^4.12.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^6.1.3"
+	},
+	"browserslist": "last 5 versions"
+}
