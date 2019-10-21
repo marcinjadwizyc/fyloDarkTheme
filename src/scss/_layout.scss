@@ -43,12 +43,13 @@
 	}
 }
 
-.main__section:not(.features) {
+.main__section {
+	@include flex(column, center, center);
 	padding: 6rem 2rem;
 }
 
 .features {
-	@include flex($justify: center);
+	flex-direction: row;
 	flex-wrap: wrap;
 	padding: 3rem 0;
 }
@@ -65,6 +66,23 @@
 
 	&__title {
 		margin-bottom: .6rem;
+	}
+}
+
+.info {
+	text-align: center;
+
+	&__img {
+		margin-bottom: 3rem;
+	}
+
+	&__text {
+		text-align: left;
+	}
+
+	&__title,
+	&__text {
+		margin-bottom: 1rem;
 	}
 }
 

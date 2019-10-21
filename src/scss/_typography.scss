@@ -17,12 +17,10 @@
 }
 
 .text {
-	&--primary {
-		font-size: 1.25rem;
-	}
-
+	&--primary,
+	&--secondary,
 	&--feature {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 	}
 }
 
@@ -36,6 +34,14 @@
 	.text {
 		&--primary {
 			font-size: 1.3rem;
+		}
+
+		&--secondary {
+			font-size: 1.25rem;
+		}
+
+		&--feature {
+			font-size: 1.2rem;
 		}
 	}
 }
