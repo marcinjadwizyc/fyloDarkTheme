@@ -1,0 +1,19 @@
+.background {
+    &--intro {
+        background-color: $colorBgIntro;
+        background-image: url("./assets/bg-curvy-mobile.svg");
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    &--footer {
+        background-color: $colorBgFooter;
+    }
+}
+
+@include minMedia(500px){
+    .background--intro {
+        background-image: url("./assets/bg-curvy-desktop.svg");
+    }
+}

@@ -1,0 +1,23 @@
+@mixin minMedia($width) {
+    @media only screen and (min-width: $width){
+        @content;
+    }
+}
+
+@mixin dimenstions($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $isInline: false) {
+    @if $isInline {
+        display: inline-flex;
+    }
+    @else {
+        display: flex;
+    }
+
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

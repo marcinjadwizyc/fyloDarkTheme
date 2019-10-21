@@ -1,0 +1,17 @@
+.btn {
+	@include flex($justify: center, $align: center);
+	background-image: linear-gradient(to right, $colorCyan, $colorBlue);
+	border: none;
+	border-radius: 50px;
+	font-family: $fontAccent;
+	font-size: 1.25rem;
+	text-transform: capitalize;
+	height: 3.65rem;
+	width: 20rem;
+	transition: $transitionTime;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.07);
+	}
+}

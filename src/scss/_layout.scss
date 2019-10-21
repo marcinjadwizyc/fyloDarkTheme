@@ -1,1 +1,68 @@
+.img {
+	max-width: 100%;
+}
 
+.contentWrapper {
+	max-width: 94rem;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 2rem;
+
+	&__bar {
+		@include flex($justify: space-between, $align: center);
+		margin-bottom: 4rem;
+	}
+
+	&__content {
+		@include flex(column, center, center);
+		text-align: center;
+	}
+
+	&__logo {
+		width: 8rem;
+	}
+
+	&__img,
+	&__text {
+		margin-bottom: 3rem;
+	}
+
+	&__img {
+		width: 30rem;
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+		max-width: 30rem;
+	}
+
+	&__text {
+		max-width: 22rem;
+	}
+}
+
+@include minMedia(340px) {
+	.header__text {
+		max-width: 26rem;
+	}
+}
+
+@include minMedia(500px) {
+	.header {
+		padding: 2.5rem 4rem 4rem 4rem;
+
+		&__img {
+			width: 40rem;
+		}
+
+		&__title {
+			max-width: 45rem;
+		}
+
+		&__text {
+			max-width: 40rem;
+		}
+	}
+}

@@ -1,1 +1,33 @@
+.text,
+.title {
+	line-height: 1.5;
+}
 
+.title {
+	font-family: $fontAccent;
+	font-weight: 700;
+
+	&--primary {
+		font-size: 2rem;
+	}
+}
+
+.text {
+	&--primary {
+		font-size: 1.25rem;
+	}
+}
+
+@include minMedia(500px) {
+	.title {
+		&--primary {
+			font-size: 2.4rem;
+		}
+	}
+
+	.text {
+		&--primary {
+			font-size: 1.3rem;
+		}
+	}
+}

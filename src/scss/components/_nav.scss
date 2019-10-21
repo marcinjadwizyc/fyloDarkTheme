@@ -1,0 +1,27 @@
+.nav {
+	&__list {
+		display: flex;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 2rem;
+	}
+
+	&__link {
+		font-family: $fontAccent;
+		font-size: 1rem;
+		text-transform: capitalize;
+		transition: $transitionTime;
+
+		&:hover,
+		&:focus {
+			color: $colorCyan;
+		}
+	}
+}
+
+@include minMedia(500px) {
+	.nav__item:not(:last-child) {
+		margin-right: 3rem;
+	}
+}
