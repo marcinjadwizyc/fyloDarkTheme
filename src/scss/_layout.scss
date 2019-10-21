@@ -43,6 +43,31 @@
 	}
 }
 
+.main__section:not(.features) {
+	padding: 6rem 2rem;
+}
+
+.features {
+	@include flex($justify: center);
+	flex-wrap: wrap;
+	padding: 3rem 0;
+}
+
+.feature {
+	text-align: center;
+	margin: 3rem 2rem;
+	max-width: 26rem;
+
+	&__icon {
+		height: 6rem;
+		margin-bottom: 2rem;
+	}
+
+	&__title {
+		margin-bottom: .6rem;
+	}
+}
+
 @include minMedia(340px) {
 	.header__text {
 		max-width: 26rem;
@@ -64,5 +89,21 @@
 		&__text {
 			max-width: 40rem;
 		}
+	}
+
+	.main__section {
+		padding: 7rem 4rem;
+	}
+}
+
+@include minMedia(1000px) {
+	.feature {
+		max-width: 30rem;
+	}
+}
+
+@include minMedia(1200px) {
+	.feature {
+		margin: 3rem 4rem;
 	}
 }
