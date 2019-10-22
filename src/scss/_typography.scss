@@ -11,7 +11,8 @@
 		font-size: 2rem;
 	}
 
-	&--feature {
+	&--feature,
+	&--secondary {
 		font-size: 1.45rem;
 	}
 }
@@ -29,6 +30,10 @@
 		&--primary {
 			font-size: 2.4rem;
 		}
+
+		&--secondary {
+			font-size: 2rem;
+		}
 	}
 
 	.text {
@@ -43,5 +48,11 @@
 		&--feature {
 			font-size: 1.2rem;
 		}
+	}
+}
+
+@include minMedia(700px) {
+	.title--secondary {
+		font-size: 2.4rem;
 	}
 }

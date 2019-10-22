@@ -29,7 +29,7 @@ ul {
   font-weight: 700; }
   .title--primary {
     font-size: 2rem; }
-  .title--feature {
+  .title--feature, .title--secondary {
     font-size: 1.45rem; }
 
 .text--primary, .text--secondary, .text--feature {
@@ -38,12 +38,18 @@ ul {
 @media only screen and (min-width: 500px) {
   .title--primary {
     font-size: 2.4rem; }
+  .title--secondary {
+    font-size: 2rem; }
   .text--primary {
     font-size: 1.3rem; }
   .text--secondary {
     font-size: 1.25rem; }
   .text--feature {
     font-size: 1.2rem; } }
+
+@media only screen and (min-width: 700px) {
+  .title--secondary {
+    font-size: 2.4rem; } }
 
 .img {
   max-width: 100%; }
@@ -103,11 +109,12 @@ ul {
 .info {
   text-align: center; }
   .info__img {
+    width: 30rem;
     margin-bottom: 3rem; }
   .info__text {
     text-align: left; }
   .info__title, .info__text {
-    margin-bottom: 1rem; }
+    margin-bottom: 1.5rem; }
 
 @media only screen and (min-width: 340px) {
   .header__text {
@@ -123,7 +130,25 @@ ul {
     .header__text {
       max-width: 40rem; }
   .main__section {
-    padding: 7rem 4rem; } }
+    padding: 7rem 4rem; }
+  .info__img {
+    width: 40rem;
+    margin-bottom: 4rem; }
+  .info__content {
+    max-width: 40rem; } }
+
+@media only screen and (min-width: 880px) {
+  .info {
+    flex-direction: row; }
+    .info__img, .info__content {
+      width: 50%; }
+    .info__img {
+      margin-bottom: 0; }
+    .info__content {
+      text-align: left;
+      padding-left: 3rem; }
+    .info__title {
+      max-width: 24rem; } }
 
 @media only screen and (min-width: 1000px) {
   .feature {
@@ -181,3 +206,19 @@ ul {
   transition: 0.4s; }
   .btn:hover, .btn:focus {
     transform: scale(1.07); }
+
+.link {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+  .link--cyan {
+    color: #65e2d9;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #65e2d9;
+    padding-bottom: 3px;
+    transition: 0.4s; }
+    .link--cyan:hover, .link--cyan:focus {
+      border-color: transparent; }
+  .link__icon--right {
+    margin-left: 0.6rem; }
