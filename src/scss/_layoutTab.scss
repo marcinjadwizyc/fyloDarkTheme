@@ -1,0 +1,64 @@
+@include minMedia(500px) {
+	.header__img,
+	.info__img {
+		width: 40rem;
+	}
+
+	.header__text,
+	.info__content {
+		max-width: 40rem;
+	}
+
+	.header {
+		padding: 2.5rem 4rem 4rem 4rem;
+
+		&__title {
+			max-width: 45rem;
+		}
+	}
+
+	.main__section {
+		padding: 7rem 4rem;
+	}
+
+	.testimonials {
+		padding: 4rem;
+	}
+}
+
+@include minMedia(800px){
+	.features__row,
+	.info,
+	.testimonials {
+		flex-direction: row;
+	}
+
+	.feature:not(:last-child){
+		margin-bottom: 0;
+		margin-right: 3rem;
+	}
+
+	.info {
+		&__img,
+		&__content {
+			width: 50%;
+			max-width: 50%;
+		}
+
+		&__content {
+			padding-left: 3rem;
+		}
+
+		&__title {
+			text-align: left;
+			max-width: 26rem;
+		}
+	}
+
+	.card {
+		&:not(:last-child){
+			margin-bottom: 0;
+			margin-right: 3rem;
+		}
+	}
+}

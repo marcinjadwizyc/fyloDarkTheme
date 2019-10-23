@@ -1,20 +1,20 @@
 .link {
-	@include flex($align: center, $isInline: true);
+    transition: $transitionTime;
+   @include flex($align: center, $isInline: true);
 
-	&--cyan {
-		color: $colorCyan;
-		font-size: 1.15rem;
-		border-bottom: 1px solid $colorCyan;
-		padding-bottom: 3px;
-		transition: $transitionTime;
+    &--cyan {
+        padding-bottom: 3px;
+        font-size: 1.1rem;
+        color: $colorCyan;
+        border-bottom: 1px solid $colorCyan;
 
-		&:hover,
-		&:focus {
-			border-color: transparent;
-		}
-	}
+        &:hover,
+        &:focus {
+            border-color: transparent;
+        }
+    }
 
-	&__icon--right {
-		margin-left: 0.6rem;
-	}
+    &__icon--right {
+        margin-left: 0.7rem;
+    }
 }

@@ -1,1 +1,15 @@
+@include minMedia(1000px){
+    .feature:not(:last-child){
+        margin-right: 6rem;
+    }
+}
 
+@include minMedia(1300px){
+    .feature:not(:last-child){
+        margin-right: 8rem;
+    }
+
+    .features__row:not(:last-child){
+        margin-bottom: 8rem;
+    }
+}

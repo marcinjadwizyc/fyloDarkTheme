@@ -4,7 +4,7 @@
     }
 }
 
-@mixin dimenstions($width: auto, $height: auto) {
+@mixin dimensions($width: auto, $height: auto) {
     width: $width;
     height: $height;
 }

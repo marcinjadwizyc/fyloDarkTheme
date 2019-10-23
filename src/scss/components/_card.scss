@@ -1,0 +1,42 @@
+.card {
+    background-color: $colorBgTestimonial;
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+
+    &--withIcon {
+        position: relative;
+    }
+
+    &__icon {
+        width: 30px;
+        position: absolute;
+        left: 6px;
+        top: -22px;
+        z-index: -1;
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        @include dimensions(2.4rem, 2.4rem);
+        border-radius: 100%;
+    }
+
+    &__username {
+        margin-left: 1rem;
+    }
+
+    &__name,
+    &__occupation {
+        font-size: .9rem;
+    }
+}

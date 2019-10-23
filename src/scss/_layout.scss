@@ -7,6 +7,17 @@
 	margin: 0 auto;
 }
 
+.main__section {
+	@include flex(column, center, center);
+	padding: 6rem 2rem;
+}
+
+.header__img,
+.info__img {
+	width: 30rem;
+	margin-bottom: 3rem;
+}
+
 .header {
 	padding: 2rem;
 
@@ -24,13 +35,8 @@
 		width: 8rem;
 	}
 
-	&__img,
 	&__text {
 		margin-bottom: 3rem;
-	}
-
-	&__img {
-		width: 30rem;
 	}
 
 	&__title {
@@ -43,121 +49,56 @@
 	}
 }
 
-.main__section {
-	@include flex(column, center, center);
-	padding: 6rem 2rem;
+.features__row:not(:last-child),
+.feature:not(:last-child) {
+	margin-bottom: 6rem;
 }
 
-.features {
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 3rem 0;
+.features__row {
+	@include flex(column, $align: center);
 }
 
 .feature {
 	text-align: center;
-	margin: 3rem 2rem;
-	max-width: 26rem;
+	max-width: 30rem;
 
 	&__icon {
-		height: 6rem;
-		margin-bottom: 2rem;
+		height: 5rem;
+		margin-bottom: 2.5rem;
 	}
 
 	&__title {
-		margin-bottom: .6rem;
+		margin-bottom: 1rem;
 	}
 }
 
 .info {
-	text-align: center;
-
-	&__img {
-		width: 30rem;
-		margin-bottom: 3rem;
-	}
-
-	&__text {
-		text-align: left;
-	}
+	text-align: left;
 
 	&__title,
 	&__text {
 		margin-bottom: 1.5rem;
 	}
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.card {
+	max-width: 36rem;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.testimonials {
+	padding: 4rem;
 }
 
 @include minMedia(340px) {
 	.header__text {
 		max-width: 26rem;
-	}
-}
-
-@include minMedia(500px) {
-	.header {
-		padding: 2.5rem 4rem 4rem 4rem;
-
-		&__img {
-			width: 40rem;
-		}
-
-		&__title {
-			max-width: 45rem;
-		}
-
-		&__text {
-			max-width: 40rem;
-		}
-	}
-
-	.main__section {
-		padding: 7rem 4rem;
-	}
-
-	.info {
-		&__img {
-			width: 40rem;
-			margin-bottom: 4rem;
-		}
-
-		&__content {
-			max-width: 40rem;
-		}
-	}
-}
-
-@include minMedia(880px) {
-	.info {
-		flex-direction: row;
-
-		&__img,
-		&__content {
-			width: 50%;
-		}
-
-		&__img {
-			margin-bottom: 0;
-		}
-
-		&__content {
-			text-align: left;
-			padding-left: 3rem;
-		}
-
-		&__title {
-			max-width: 24rem;
-		}
-	}
-}
-
-@include minMedia(1000px) {
-	.feature {
-		max-width: 30rem;
-	}
-}
-
-@include minMedia(1200px) {
-	.feature {
-		margin: 3rem 4rem;
 	}
 }
