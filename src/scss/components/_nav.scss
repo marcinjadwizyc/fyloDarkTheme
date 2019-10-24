@@ -3,8 +3,20 @@
 		display: flex;
 	}
 
-	&__item:not(:last-child) {
+	&__list--column {
+		flex-direction: column;
+
+		&:not(:last-child){
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	&__item:not(:last-child):not(.nav__item--inColumn) {
 		margin-right: 2rem;
+	}
+
+	&__item--inColumn:not(:last-child){
+		margin-bottom: 1rem;
 	}
 
 	&__link {
@@ -18,10 +30,22 @@
 			color: $colorCyan;
 		}
 	}
+
+	&__link--large {
+		font-family: "Open Sans", sans-serif;
+		font-size: 1.3rem;
+	}
 }
 
 @include minMedia(500px) {
-	.nav__item:not(:last-child) {
-		margin-right: 3rem;
+	.nav {
+		&__list--column:not(:last-child) {
+			margin-bottom: 0;
+			margin-right: 6rem;
+		}
+
+		&__item:not(:last-child):not(.nav__item--inColumn) {
+			margin-right: 3rem;
+		}
 	}
 }

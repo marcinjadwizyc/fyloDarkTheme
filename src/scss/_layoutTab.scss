@@ -24,16 +24,37 @@
 	.testimonials {
 		padding: 4rem;
 	}
+
+	.footer {
+		padding: 4rem 2rem;
+
+		&__logo {
+			margin-left: 2rem;
+		}
+
+		&__content > * {
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+
+		&__nav {
+			@include flex;
+		}
+
+		&__contact {
+			max-width: 34rem;
+		}
+	}
 }
 
-@include minMedia(800px){
+@include minMedia(800px) {
 	.features__row,
 	.info,
 	.testimonials {
 		flex-direction: row;
 	}
 
-	.feature:not(:last-child){
+	.feature:not(:last-child) {
 		margin-bottom: 0;
 		margin-right: 3rem;
 	}
@@ -56,9 +77,21 @@
 	}
 
 	.card {
-		&:not(:last-child){
+		&:not(:last-child) {
 			margin-bottom: 0;
 			margin-right: 3rem;
+		}
+	}
+
+	.footer {
+		&__content {
+			@include flex($justify: flex-start);
+			flex-wrap: wrap;
+		}
+
+		&__contact,
+		&__nav {
+			margin-bottom: 0;
 		}
 	}
 }

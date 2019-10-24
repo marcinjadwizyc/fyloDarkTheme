@@ -1,8 +1,15 @@
 .link {
     transition: $transitionTime;
-   @include flex($align: center, $isInline: true);
+    @include flex($align: baseline);
+    font-size: 1.3rem;
+
+    &:not(.link--cyan):not(:last-child) {
+        margin-bottom: 1rem;
+    }
 
     &--cyan {
+        display: inline-flex;
+        align-items: center;
         padding-bottom: 3px;
         font-size: 1.1rem;
         color: $colorCyan;
@@ -14,7 +21,16 @@
         }
     }
 
+    &:hover,
+    &:focus {
+        color: $colorCyan;
+    }
+
     &__icon--right {
-        margin-left: 0.7rem;
+        margin-left: .7rem;
+    }
+
+    &__icon--left {
+        margin-right: 1rem;
     }
 }
