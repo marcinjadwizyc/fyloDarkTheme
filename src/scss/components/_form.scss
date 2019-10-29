@@ -1,0 +1,61 @@
+.form {
+	&__input,
+	&__btn {
+		height: 3rem;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__input {
+		border: 2px solid transparent;
+		border-radius: 50px;
+		font-family: $fontAccent;
+		font-size: 1.25rem;
+		padding: 0 1rem;
+		width: 20rem;
+		transition: $transitionTime;
+
+		&:focus,
+		&:hover {
+			border-color: $colorBlue;
+		}
+	}
+
+	&__inputContainer {
+		width: 100%;
+	}
+
+	&__validator {
+		color: lighten(red, 15%);
+		font-size: 1rem;
+		padding-top: 2px;
+		display: none;
+	}
+
+	&__inputContainer--invalid {
+		.form__validator {
+			display: inline-block;
+		}
+
+		.form__input {
+			border-color: lighten(red, 15%);
+		}
+	}
+}
+
+@include minMedia(500px) {
+	.form {
+		@include flex;
+
+		&__inputContainer {
+			margin-bottom: 0;
+			margin-right: 1rem;
+		}
+
+		&__input {
+			width: 100%;
+		}
+	}
+}

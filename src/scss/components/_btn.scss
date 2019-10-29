@@ -4,11 +4,13 @@
 	border: none;
 	border-radius: 50px;
 	font-family: $fontAccent;
+	color: #fff;
 	font-size: 1.25rem;
 	text-transform: capitalize;
 	height: 3.65rem;
 	width: 20rem;
 	transition: $transitionTime;
+	cursor: pointer;
 
 	&:hover,
 	&:focus {
