@@ -11,7 +11,8 @@
 		"build:css": "run-s compile:css prefix:css",
 		"build:html": "html-minifier ./src/index.html -o ./build/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes",
 		"copy:assets": "copyfiles ./src/assets/* ./build/assets --flat",
-		"build": "run-s build:css build:html copy:assets",
+		"copy:js": "copyfiles ./src/script.js ./build/ --flat",
+		"build": "run-s build:css build:html copy:assets copy:js",
 		"start": "run-p devserver watch:scss"
 	},
 	"repository": {
