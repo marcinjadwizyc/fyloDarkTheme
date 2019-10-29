@@ -84,6 +84,8 @@
 	}
 
 	.footer {
+		padding: 6rem 4rem;
+
 		&__content {
 			@include flex($justify: flex-start);
 			flex-wrap: wrap;

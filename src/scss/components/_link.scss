@@ -1,36 +1,38 @@
 .link {
-    transition: $transitionTime;
-    @include flex($align: baseline);
-    font-size: 1.3rem;
+	transition: $transitionTime;
+	@include flex($align: baseline);
+	font-size: 1.25rem;
 
-    &:not(.link--cyan):not(:last-child) {
-        margin-bottom: 1rem;
-    }
+	&:not(.link--cyan):not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-    &--cyan {
-        display: inline-flex;
-        align-items: center;
-        padding-bottom: 3px;
-        font-size: 1.1rem;
-        color: $colorCyan;
-        border-bottom: 1px solid $colorCyan;
+	&--cyan {
+		display: inline-flex;
+		align-items: center;
+		padding-bottom: 3px;
+		font-size: 1.1rem;
+		color: $colorCyan;
+		border-bottom: 1px solid $colorCyan;
 
-        &:hover,
-        &:focus {
-            border-color: transparent;
-        }
-    }
+		&:hover,
+		&:focus {
+			border-color: transparent;
+		}
+	}
 
-    &:hover,
-    &:focus {
-        color: $colorCyan;
-    }
+	&:not(.link--cyan) {
+		&:hover,
+		&:focus {
+			color: $colorBlue;
+		}
+	}
 
-    &__icon--right {
-        margin-left: .7rem;
-    }
+	&__icon--right {
+		margin-left: .7rem;
+	}
 
-    &__icon--left {
-        margin-right: 1rem;
-    }
+	&__icon--left {
+		margin-right: 1rem;
+	}
 }
