@@ -10,10 +10,11 @@
 
 	function ctaPositionHandler() {
 		var ctaHeight = cta.offsetHeight;
+		var paddings = ctaHeight / 2 + 70 + "px";
 
 		cta.style.bottom = "-" + ctaHeight / 2 + "px";
-		testimonials.style.paddingBottom = ctaHeight / 2 + 80 + "px";
-		footer.style.paddingTop = ctaHeight / 2 + 80 + "px";
+		testimonials.style.paddingBottom = paddings;
+		footer.style.paddingTop = paddings;
 	}
 
 	function formSubmitHandler(event) {
