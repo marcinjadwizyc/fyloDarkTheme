@@ -1,14 +1,19 @@
+@include minMedia(900px) {
+	.footer__content {
+		@include flex($justify: flex-start);
+		flex-wrap: wrap;
+	}
+}
+
 @include minMedia(1000px) {
 	.feature:not(:last-child) {
 		margin-right: 6rem;
 	}
 }
 
-@include minMedia(1147px) {
-	.footer {
-		&__content {
-			justify-content: space-between;
-		}
+@include minMedia(1150px) {
+	.footer__content {
+		justify-content: space-between;
 	}
 }
 

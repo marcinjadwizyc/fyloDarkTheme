@@ -142,9 +142,10 @@ ul {
   padding: 3rem 2rem;
   position: relative; }
   .footer__logo {
-    width: 12rem; }
+    width: 12rem;
+    margin-bottom: 3rem; }
   .footer__content > * {
-    margin-top: 3rem; }
+    margin-bottom: 3rem; }
   .footer__socialMedia {
     text-align: center; }
 
@@ -214,21 +215,21 @@ ul {
     margin-bottom: 0;
     margin-right: 3rem; }
   .footer {
-    padding: 6rem 4rem; }
-    .footer__content {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: wrap; }
-    .footer__contact, .footer__nav {
-      margin-bottom: 0; } }
+    padding: 3rem 4rem; } }
+
+@media only screen and (min-width: 900px) {
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap; } }
 
 @media only screen and (min-width: 1000px) {
   .feature:not(:last-child) {
     margin-right: 6rem; } }
 
-@media only screen and (min-width: 1147px) {
+@media only screen and (min-width: 1150px) {
   .footer__content {
     justify-content: space-between; } }
 
